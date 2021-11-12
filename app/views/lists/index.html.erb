@@ -1,9 +1,12 @@
-<h1>See all lists of movies!</h1>
-<ul>
-  <% @lists.each do |list| %>
-  <li>
-    <%= link_to list.name, list_path(list) %>
-  </li>
-  <% end %>
-</ul>
-<%= link_to "+ Create a new list", new_list_path %>
+<%= render "components/banner" %>
+<div class="container">
+  <h1>See all lists of movies!</h1>
+  <ul>
+    <% @lists.each do |list| %>
+    <li>
+      <%= link_to list.name, list_path(list) %>
+    </li>
+    <% end %>
+  </ul>
+  <%= link_to "+ Create a new list", new_list_path %>
+</div>
