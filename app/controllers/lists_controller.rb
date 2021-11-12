@@ -16,7 +16,7 @@ class ListsController < ApplicationController
     if @list.save
       redirect_to @list, notice: "List was successfully created"
     else
-      render :new, status: :unprocessable_unity
+      render :new
     end
   end
 
